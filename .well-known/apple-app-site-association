@@ -1,7 +1,7 @@
 {
   "applinks": {
     "details": [
-      { "appIDs": ["W6NSDTGJBK.com.amitman.echoisles"], "components": [{ "/": "/echo-isles/join*" }] }
+      { "appIDs": ["W6NSDTGJBK.com.echoisles.kids", "W6NSDTGJBK.com.amitman.echoisles"], "components": [{ "/": "/echo-isles/join*" }] }
     ]
   }
 }
