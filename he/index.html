@@ -1,0 +1,315 @@
+<!doctype html>
+<html lang="he" dir="rtl">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Echo Isles Kids: אנגלית שמדברים בקול</title>
+<meta name="description" content="משחק הרפתקאות ללימוד אנגלית. הילד אומר אנגלית בקול, והמשחק שומע אותו. מגיל 7, גם בלי אנגלית בכלל.">
+<meta property="og:title" content="Echo Isles Kids">
+<meta property="og:description" content="אנגלית שמדברים בקול, מהדקה הראשונה">
+<meta property="og:image" content="https://echo-isles.com/img/share.jpg">
+<meta property="og:type" content="website">
+<meta name="apple-itunes-app" content="app-id=6837917181">
+<link rel="canonical" href="https://echo-isles.com/he/">
+<link rel="alternate" hreflang="he" href="https://echo-isles.com/he/">
+<link rel="alternate" hreflang="x-default" href="https://echo-isles.com/">
+<link rel="icon" href="/img/icon-180.png">
+<link rel="apple-touch-icon" href="/img/icon-180.png">
+<style>
+:root{--deep:#071d24;--sea:#0b2b33;--card:#123a44;--line:rgba(201,162,74,.28);--gold:#ffd978;--gold2:#f0b84a;--ink:#3a2606;--light:#eaf6f4;--muted:#a7c7c6;--parch:#f6ecd6}
+*{box-sizing:border-box}
+html{scroll-behavior:smooth}
+body{margin:0;font:18px/1.6 -apple-system,"SF Pro Text",system-ui,"Segoe UI",Arial,sans-serif;background:var(--sea);color:var(--light);-webkit-font-smoothing:antialiased}
+img{max-width:100%;height:auto;display:block}
+a{color:var(--gold)}
+.wrap{max-width:1060px;margin:0 auto;padding:0 20px}
+/* the hero: the harbour painting, fading into the page */
+.hero{position:relative;background:var(--deep)}
+.hero picture img{width:100%;height:min(56vh,560px);object-fit:cover;object-position:55% 40%}
+@media(max-width:700px){.hero picture img{height:auto;aspect-ratio:5/4}}
+.nw{white-space:nowrap}
+.hero::after{content:"";position:absolute;inset:auto 0 0 0;height:30%;background:linear-gradient(to bottom,rgba(11,43,51,0),var(--sea))}
+.top{position:relative;z-index:1;margin-top:-50px;text-align:center;padding-bottom:26px}
+.icon{width:92px;height:92px;border-radius:21px;margin:0 auto 14px;box-shadow:0 10px 26px rgba(0,0,0,.45);border:2px solid rgba(255,240,184,.55)}
+h1{margin:0;font-size:clamp(38px,7vw,60px);line-height:1.1;color:var(--gold);letter-spacing:.2px}
+.sub{margin:10px 0 0;font-size:clamp(20px,3.4vw,26px);font-weight:700}
+.tags{display:flex;flex-wrap:wrap;gap:8px;justify-content:center;margin:18px 0 0;padding:0;list-style:none}
+.tags li{font-size:15px;font-weight:600;padding:6px 14px;border-radius:999px;background:rgba(255,255,255,.08);border:1px solid var(--line)}
+.cta{display:inline-block;margin-top:24px;padding:15px 34px;border-radius:18px;font-size:21px;font-weight:800;text-decoration:none;color:var(--ink);background:linear-gradient(#ffe9a6,var(--gold2));border:2px solid #fff0b8;box-shadow:0 6px 0 #7a4f10,0 16px 28px rgba(0,0,0,.4)}
+.cta:active{transform:translateY(4px);box-shadow:0 2px 0 #7a4f10,0 8px 16px rgba(0,0,0,.4)}
+.under{margin:16px 0 0;font-size:15px;color:var(--muted)}
+section{padding:54px 0}
+h2{margin:0 0 14px;font-size:clamp(26px,4.4vw,36px);line-height:1.25;color:var(--gold)}
+h3{margin:0 0 8px;font-size:22px;color:var(--gold)}
+p{margin:0 0 14px}
+.lead{font-size:20px}
+/* text beside a phone */
+.row{display:grid;grid-template-columns:1fr;gap:28px;align-items:center}
+@media(min-width:820px){.row{grid-template-columns:1.15fr .85fr;gap:48px}.row.flip .shot{order:-1}}
+.phone{width:min(280px,66%);margin:0 auto;border-radius:38px;padding:9px;background:#02090c;box-shadow:0 22px 50px rgba(0,0,0,.5),0 0 0 2px rgba(201,162,74,.35)}
+.phone img{border-radius:30px}
+.pair{display:flex;gap:16px;justify-content:center}
+.pair .phone{width:min(230px,46%);border-radius:30px;padding:7px}
+.pair .phone img{border-radius:24px}
+.wide{border-radius:22px;padding:8px;background:#02090c;box-shadow:0 22px 50px rgba(0,0,0,.5),0 0 0 2px rgba(201,162,74,.35);margin-top:26px}
+.wide img{border-radius:15px;width:100%}
+.band{background:linear-gradient(var(--deep),#0a252d);border-block:1px solid var(--line)}
+/* the four steps */
+.steps{display:grid;grid-template-columns:1fr;gap:16px;margin:26px 0 0;padding:0;list-style:none;counter-reset:s}
+@media(min-width:820px){.steps{grid-template-columns:repeat(2,1fr)}}
+.steps li{counter-increment:s;background:var(--card);border:1px solid var(--line);border-radius:20px;padding:20px 20px 20px 20px;display:grid;grid-template-columns:auto 1fr;gap:16px;align-items:start}
+.steps li::before{content:counter(s);width:44px;height:44px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:21px;color:var(--ink);background:linear-gradient(#ffe9a6,var(--gold2))}
+.steps b{display:block;font-size:21px;color:var(--gold);margin-bottom:4px}
+.steps p{margin:0}
+.shots{display:grid;grid-template-columns:repeat(3,1fr);gap:14px;margin-top:30px}
+.shots .phone{width:100%;border-radius:26px;padding:6px}
+.shots .phone img{border-radius:21px}
+.shots figure{margin:0}
+.shots figcaption{text-align:center;font-size:15px;color:var(--muted);margin-top:10px}
+/* how it works, as the app tells it */
+.part{margin-top:44px}
+.part>h3{font-size:clamp(22px,3.6vw,28px);margin-bottom:12px}
+.muted{color:var(--muted)}
+.center{text-align:center}
+.art{position:relative;border-radius:18px;overflow:hidden;border:1.5px solid rgba(201,162,74,.45)}
+.isles span{position:absolute;transform:translate(-50%,-50%);font-weight:800;font-size:clamp(11px,3.2vw,16px);color:#2a1d08;background:var(--parch);padding:2px 9px;border-radius:999px;box-shadow:0 1px 3px rgba(0,0,0,.35);white-space:nowrap}
+.talk{display:grid;gap:10px;margin:14px 0 16px}
+.talk p{margin:0;font-weight:700;font-size:16px;padding:8px 13px;border-radius:14px;width:fit-content;max-width:100%}
+.talk .me{background:linear-gradient(#ffe9a6,var(--gold2));color:var(--ink)}
+.talk .it{background:var(--parch);color:#2a1d08;justify-self:end}
+.slot{display:inline-flex;align-items:center;gap:5px;min-width:128px;justify-content:center;padding:2px 8px;margin:0 2px;border-radius:10px;border:1.5px dashed var(--ink);background:rgba(58,38,6,.12);vertical-align:middle}
+.slot img{width:22px;height:26px;object-fit:contain}
+.words{display:flex;gap:10px;justify-content:center}
+.words figure{margin:0;width:88px;padding:7px 0;border-radius:12px;background:var(--parch);color:#2a1d08;text-align:center;font-weight:700;font-size:14px;border:3px solid transparent;transition:border-color .25s}
+.words figure.on{border-color:var(--gold2)}
+.words img{height:54px;width:auto;margin:0 auto 2px}
+.comic{list-style:none;margin:22px 0 18px;padding:0;display:grid;gap:30px;grid-template-columns:1fr}
+@media(min-width:820px){.comic{grid-template-columns:repeat(2,1fr);gap:34px 30px}.comic .last{grid-column:1/-1;max-width:520px;margin:0 auto;width:100%}}
+.comic h4{margin:0 0 9px;font-size:20px;color:var(--gold2);display:flex;align-items:center;gap:9px}
+.comic h4 i{font-style:normal;width:27px;height:27px;border-radius:50%;display:grid;place-items:center;font-size:15px;font-weight:800;color:var(--deep);background:var(--gold2);flex:none}
+.comic li>p{margin:9px 0 0;font-size:16px}
+.goal{display:flex;gap:8px;align-items:flex-start;margin:0 0 9px!important;padding:9px 12px;border-radius:12px;background:var(--parch);color:#2a1d08;font-weight:700;font-size:15px}
+.goal b{flex:none;font-size:11px;font-weight:800;color:var(--parch);background:#2a1d08;padding:3px 8px;border-radius:999px}
+.panel{position:relative;direction:ltr;container-type:inline-size;border-radius:16px;overflow:hidden;border:1.5px solid rgba(201,162,74,.45)}
+.b{position:absolute;margin:0;font-weight:700;font-size:clamp(10px,3.7cqw,17px);line-height:1.25;padding:.45em .75em;border-radius:1em;max-width:50%;box-shadow:0 2px 3px rgba(0,0,0,.3)}
+.b i{position:absolute;top:-.7em;right:-.6em;font-style:normal;font-size:.8em;width:1.5em;height:1.5em;border-radius:50%;display:grid;place-items:center;color:var(--gold2);background:var(--deep);border:1px solid var(--gold2)}
+.b.kid{left:2%;color:var(--ink);background:linear-gradient(#ffe9a6,var(--gold2))}
+.b.kid::before{content:"";display:inline-block;width:.75em;height:.95em;margin-inline-end:.4em;vertical-align:-.1em;background:var(--ink);-webkit-mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 16'%3E%3Cpath d='M6 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3zM1 7v1a5 5 0 0 0 4 4.9V15H3v1h6v-1H7v-2.1A5 5 0 0 0 11 8V7h-1v1a4 4 0 0 1-8 0V7z'/%3E%3C/svg%3E") center/contain no-repeat;mask:url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 12 16'%3E%3Cpath d='M6 0a3 3 0 0 0-3 3v5a3 3 0 0 0 6 0V3a3 3 0 0 0-3-3zM1 7v1a5 5 0 0 0 4 4.9V15H3v1h6v-1H7v-2.1A5 5 0 0 0 11 8V7h-1v1a4 4 0 0 1-8 0V7z'/%3E%3C/svg%3E") center/contain no-repeat}
+.b.wolf{right:2%;color:#2a1d08;background:var(--parch)}
+.b.he{right:3%;color:#fff;background:#1f9c8b;border-radius:999px;padding:.3em .85em;max-width:70%;white-space:nowrap}
+.b.ok::after{content:"✓";position:absolute;top:-.6em;left:-.6em;width:1.5em;height:1.5em;border-radius:50%;display:grid;place-items:center;font-size:.8em;font-weight:800;color:#fff;background:#2fb36b}
+.joins{display:flex;gap:12px;align-items:center;padding:10px 14px;border-radius:16px;background:rgba(255,255,255,.06);border:1px solid rgba(201,162,74,.3)}
+.joins img{width:74px;height:74px;flex:none}
+.joins p{margin:0}
+#battles .wide{margin:0 0 18px}
+/* the points */
+.points{display:grid;grid-template-columns:1fr;gap:14px;margin:22px 0 0;padding:0;list-style:none}
+@media(min-width:820px){.points{grid-template-columns:repeat(2,1fr)}}
+.points li{background:var(--card);border:1px solid var(--line);border-radius:18px;padding:18px 20px}
+.points b{color:var(--gold)}
+.checks{margin:18px 0 0;padding:0;list-style:none;display:grid;gap:12px}
+.checks li{position:relative;padding-inline-start:38px}
+.checks li::before{content:"✓";position:absolute;inset-inline-start:0;top:1px;width:26px;height:26px;border-radius:50%;display:grid;place-items:center;font-weight:800;font-size:15px;color:var(--ink);background:var(--gold2)}
+.parents{background:var(--parch);color:#22313a;border-radius:26px;padding:30px 26px;box-shadow:0 18px 40px rgba(0,0,0,.35)}
+.parents h2{color:#6b4410}
+.faq{display:grid;gap:12px;margin-top:20px}
+details{background:var(--card);border:1px solid var(--line);border-radius:16px;padding:0 20px}
+summary{cursor:pointer;font-weight:700;font-size:19px;padding:16px 0;list-style:none;display:flex;justify-content:space-between;gap:12px;align-items:center}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";color:var(--gold);font-size:26px;line-height:1;font-weight:400}
+details[open] summary::after{content:"–"}
+details p{margin:0 0 16px;color:#d3e6e4}
+.again{text-align:center}
+footer{padding:36px 0 46px;text-align:center;font-size:16px;color:var(--muted);border-top:1px solid var(--line)}
+footer p{margin:6px 0}
+</style>
+</head>
+<body>
+
+<header class="hero">
+  <picture>
+    <source media="(max-width:700px)" srcset="/img/hero-small.webp">
+    <img src="/img/hero.webp" width="2200" height="943" alt="ילדה מנופפת לשלום ליצורים על רציף הנמל: זאב שחור, חתול וטריטון, והים מאחוריהם">
+  </picture>
+</header>
+
+<div class="wrap top">
+  <img class="icon" src="/img/icon-180.png" width="92" height="92" alt="">
+  <h1 dir="ltr">Echo Isles Kids</h1>
+  <p class="sub">אנגלית שמדברים בקול, מהדקה הראשונה</p>
+  <ul class="tags"><li>מגיל 7</li><li>גם בלי אנגלית בכלל</li><li>כעשר דקות ביום</li></ul>
+  <a class="cta" href="https://apps.apple.com/il/app/id6837917181">להורדה ב־App Store</a>
+  <p class="under">ל־iPhone ול־iPad</p>
+</div>
+
+<main>
+<section id="what">
+  <div class="wrap row">
+    <div>
+      <h2>הילד כבר לומד אנגלית זמן מה, ועדיין לא מצליח לנהל שיחה?</h2>
+      <p class="lead">כאן אי אפשר להתקדם בלי לדבר. <bdi class="nw">Echo Isles Kids</bdi> הוא משחק הרפתקאות ללימוד אנגלית: הילד לא בוחר תשובות ולא מקליד. הוא אומר אנגלית בקול, והמשחק שומע אותו.</p>
+    </div>
+    <div class="shot"><div class="phone"><img src="/img/conversation.webp" width="660" height="1434" loading="lazy" alt="שיחה במשחק: פקידת הקבלה במלון, וההוראה לברר איך מגיעים לחדר"></div></div>
+  </div>
+</section>
+
+<section class="band" id="crew">
+  <div class="wrap">
+    <div class="row flip">
+      <div>
+        <h2>כל שיחה מוסיפה חבר לצוות</h2>
+        <p class="lead">על מפת ים מחכים איים, ובהם יצורים ודמויות. מי שמצליח לשוחח איתם באנגלית מקבל אותם לצוות. הצוות גדל ויוצא לקרבות, והילד מפקד עליו בקול, באנגלית.</p>
+        <p>בשביל הילד זה משחק של איסוף צוות. בשביל ההורה אלה כעשר דקות ביום שבהן הילד מדבר אנגלית.</p>
+      </div>
+      <div class="shot"><div class="phone"><img src="/img/crew.webp" width="660" height="1434" loading="lazy" alt="מסך הצוות: יצורים שמחכים להצטרף ורישומים של יצורים שעוד לא נפגשו"></div></div>
+    </div>
+  </div>
+</section>
+
+<section id="how">
+  <div class="wrap">
+    <h2>איך זה עובד</h2>
+
+    <div class="part" id="isles">
+      <h3>האיים: מעט משפטים, שיחה שלמה</h3>
+      <div class="row">
+        <div class="art isles">
+          <img src="/img/isles.webp" width="1200" height="670" loading="lazy" alt="חמישה איים קטנים בים, כל אחד נושא אחר">
+          <span style="left:16%;top:50%">להכיר</span><span style="left:31%;top:92%">משפחה</span><span style="left:50%;top:56%">אוכל</span><span style="left:70%;top:92%">חופשה</span><span style="left:85%;top:46%">חיות</span>
+        </div>
+        <div>
+          <p class="lead">כל אי הוא נושא אחד מהחיים. יש בו תבנית של מספר משפטים ומילים מצומצם, שנבחרו כך שאפשר להרכיב מהם שיחה שלמה.</p>
+          <p class="muted">למשל, באי שבו מזמינים אוכל:</p>
+          <div class="talk" dir="ltr">
+            <p class="me">Can I have <span class="slot"><img id="slot-pic" src="/img/word-icecream.webp" width="24" height="28" alt=""><span id="slot-word">an ice cream</span></span>, please?</p>
+            <p class="it">Here you are.</p>
+            <p class="me">Thank you!</p>
+            <p class="it">You're welcome.</p>
+          </div>
+          <div class="words" id="words">
+            <figure class="on"><img src="/img/word-icecream.webp" width="160" height="186" loading="lazy" alt=""><figcaption>גלידה</figcaption></figure>
+            <figure><img src="/img/word-water.webp" width="160" height="186" loading="lazy" alt=""><figcaption>מים</figcaption></figure>
+            <figure><img src="/img/word-fries.webp" width="160" height="186" loading="lazy" alt=""><figcaption>צ'יפס</figcaption></figure>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <div class="part" id="ladder">
+      <h3>הדרך שלנו ללמד לדבר</h3>
+      <p class="lead">לא לומדים על אנגלית, מדברים אותה.</p>
+      <p class="muted">משפט אחד, שלב אחרי שלב. בכל שלב הילד נשען פחות על מה ששמע, ויותר על עצמו.</p>
+      <ol class="comic">
+        <li id="st1">
+          <h4><i>1</i>מתרגלים את הדיבור</h4>
+          <div class="panel"><img src="/img/ladder-pair.webp" width="1200" height="896" loading="lazy" alt="ילד וזאב הצללים עומדים זה מול זה על הרציף">
+            <p class="b wolf" style="top:4%"><i>1</i>Can I have an ice cream, please?</p>
+            <p class="b kid" style="top:23%"><i>2</i>Can I have an ice cream, please?</p></div>
+          <p>הזאב אומר משפט, והילד אומר אותו מיד אחריו. הפה מתרגל את הצלילים, עוד לפני שצריך לזכור משהו.</p>
+        </li>
+        <li id="st2">
+          <h4><i>2</i>שולפים אחרי השהיה</h4>
+          <div class="panel"><img src="/img/ladder-pair.webp" width="1200" height="896" loading="lazy" alt="">
+            <p class="b wolf" style="top:2%"><i>1</i>Can I have an ice cream, please?</p>
+            <p class="b he" style="top:20%" dir="rtl"><i>2</i>אפשר לקבל גלידה, בבקשה?</p>
+            <p class="b kid" style="top:29%"><i>3</i>Can I have an ice cream, please?</p></div>
+          <p>בין המשפט לתור של הילד נכנסת המשמעות בעברית. המשפט כבר לא מהדהד באוזן, וצריך לשלוף אותו מהראש.</p>
+        </li>
+        <li id="st3">
+          <h4><i>3</i>שולפים מהזיכרון</h4>
+          <div class="panel"><img src="/img/ladder-pair.webp" width="1200" height="896" loading="lazy" alt="">
+            <p class="b he" style="top:3%" dir="rtl"><i>1</i>אפשר לקבל גלידה, בבקשה?</p>
+            <p class="b kid" style="top:15%"><i>2</i>Can I have an ice cream, please?</p>
+            <p class="b wolf ok" style="top:28%"><i>3</i>Can I have an ice cream, please?</p></div>
+          <p>הילד שומע רק את העברית, ואומר את המשפט באנגלית בעצמו. אחר כך הזאב חוזר על המשפט, והילד יכול לשמוע אם צדק.</p>
+        </li>
+        <li id="st4">
+          <h4><i>4</i>משוחחים כדי להשיג מטרה</h4>
+          <p class="goal"><b>המטרה</b>חם לכם, ובא לכם משהו קר. בקשו ממנו.</p>
+          <div class="panel"><img src="/img/ladder-give.webp" width="1200" height="896" loading="lazy" alt="הזאב מגיש לילד גלידה">
+            <p class="b kid" style="top:4%"><i>1</i>Can I have an ice cream, please?</p>
+            <p class="b wolf" style="top:20%;right:12%"><i>2</i>Here you are.</p>
+            <p class="b kid" style="top:30%;left:10%"><i>3</i>Thank you!</p></div>
+          <p>הילד מקבל מטרה, ואף אחד לא אומר לו איזה משפט להגיד. הוא מחליט, אומר, ומקבל את מה שרצה.</p>
+        </li>
+        <li class="last" id="st5">
+          <h4><i>5</i>הזאב מצטרף לצוות</h4>
+          <div class="joins"><img src="/img/wolf.webp" width="148" height="148" loading="lazy" alt="זאב הצללים"><p>האי הבא נפתח, ובו יצור חדש להכיר ושיחה חדשה.</p></div>
+        </li>
+      </ol>
+      <p class="muted center">הכול נאמר בקול, והמשחק שומע את הילד מילה אחר מילה.</p>
+    </div>
+
+    <div class="part" id="battles">
+      <h3>קרבות הצוות</h3>
+      <div class="wide" id="battle"><img src="/img/battle.webp" width="1400" height="644" loading="lazy" alt="קרב צוות: זאב, טרול וקוסם מול מבריחים במערה"></div>
+      <p class="lead center">בקרב אין כפתורים: הילד מפקד על היצורים שהצטרפו לצוות בקול, באנגלית. כל צעד וכל מתקפה הם משפט שהוא אומר, ומה שלמד באיים הופך לכוח.</p>
+      <p class="center">קרבות קטנים, בלי דם ובלי שום דבר מפחיד: דוחפים, מתגוננים, והמפסיד בורח.</p>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="why">
+  <div class="wrap">
+    <h2>למידה אחרת</h2>
+    <p class="lead">כאן לא מתחילים ממילים ומכללים. מתחילים מלדבר.</p>
+    <ul class="points">
+      <li><b>כיף,</b> כי זה משחק אמיתי. הילד לא עושה תרגיל: הוא רוצה את חבר הצוות הבא, והדרך היחידה לקבל אותו היא לשוחח איתו באנגלית.</li>
+      <li><b>אפקטיבי,</b> כי הילד מדבר. אין בחירה בין תשובות ואין הקלדה. כל משפט נאמר בקול, קודם אחרי שנשמע ואחר כך מהזיכרון, וחוזר שוב אחרי כמה ימים, כדי שלא יישכח.</li>
+      <li><b>שיחות שלמות,</b> לא רשימות מילים: איך קוראים לך, בן כמה אתה, יש לך חיית מחמד. משפטים שאפשר להשתמש בהם מחר.</li>
+      <li><b>בלי תסכול.</b> המשחק סלחן למבטא, עוזר כשמילה לא יוצאת, ולא תוקע ילד שמנסה. עזרה תמיד במרחק נגיעה, ואין ציונים.</li>
+    </ul>
+  </div>
+</section>
+
+<section id="parents">
+  <div class="wrap">
+    <div class="parents">
+      <h2>מה חשוב להורים לדעת</h2>
+      <ul class="checks">
+        <li>המשחק שומע את הילד בטלפון עצמו. שום הקלטה לא יוצאת ממנו בלי הסכמת הורה.</li>
+        <li>אין פרסומות, ואין מעקב של צד שלישי.</li>
+        <li>הילד לא מדבר עם אנשים אחרים במשחק.</li>
+        <li>עדכון יומי במייל, למי שרוצה: מה הילד אמר היום, ושאלות לשאול אותו בבית.</li>
+        <li>מצב נסיעה: משחקים ברכב, בלי ידיים ובלי מסך.</li>
+      </ul>
+    </div>
+  </div>
+</section>
+
+<section class="band" id="faq">
+  <div class="wrap">
+    <h2>שאלות נפוצות</h2>
+    <div class="faq">
+      <details><summary>הילד צריך לדעת אנגלית?</summary><p>לא. המשחק מתחיל מהמשפט הראשון, וההוראות בעברית.</p></details>
+      <details><summary>כמה זמן ביום?</summary><p>כעשר דקות.</p></details>
+      <details><summary>באיזה מכשיר משחקים?</summary><p>ב־iPhone וב־iPad. כמה ילדים יכולים לשחק באותו מכשיר, כל אחד עם ההתקדמות שלו.</p></details>
+      <details><summary>צריך לתת מייל?</summary><p>לא חובה. עם מייל מקבלים את העדכון היומי, ואפשר להמשיך במכשיר אחר.</p></details>
+      <details><summary>מה נשמר על הילד?</summary><p>השם, הגיל וההתקדמות במשחק. הקלטות נשמרות רק אם הורה בחר בכך. הכול כתוב ב<a href="/privacy">מדיניות הפרטיות</a>, ואפשר למחוק הכול מתוך ההגדרות.</p></details>
+      <details><summary>כמה זה עולה?</summary><p>ההורדה והמשחק בחינם.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="again" id="get">
+  <div class="wrap">
+    <a class="cta" href="https://apps.apple.com/il/app/id6837917181">להורדה ב־App Store</a>
+    <p class="under">ל־iPhone ול־iPad</p>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <p><a href="/privacy">פרטיות</a> · <a href="/terms">תנאי שימוש</a> · <a href="/credits">קרדיטים ורישיונות</a></p>
+    <p>שאלות ותמיכה: <a href="mailto:support@echo-isles.com">support@echo-isles.com</a></p>
+  </div>
+</footer>
+<script>
+// the islands' example: the word in the first line changes, as on the app's page
+(function(){var W=[["an ice cream","icecream"],["water","water"],["fries","fries"]],i=0,f=document.querySelectorAll("#words figure"),w=document.getElementById("slot-word"),p=document.getElementById("slot-pic");
+if(!w||matchMedia("(prefers-reduced-motion: reduce)").matches)return;
+setInterval(function(){i=(i+1)%W.length;w.textContent=W[i][0];p.src="/img/word-"+W[i][1]+".webp";f.forEach(function(x,n){x.classList.toggle("on",n===i)})},1800)})();
+</script>
+</body>
+</html>
